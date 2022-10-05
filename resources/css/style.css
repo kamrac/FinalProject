@@ -4,6 +4,24 @@
     font-family: 'Josefin Sans' sans-serif;
     box-sizing: border-box;
 }
+.navbar
+{
+    padding: 0 !important;
+    font-size: 1.15rem;
+    font-weight: 600;
+    z-index: 1;
+}
+.nav-link 
+{
+    color: rgb(50, 40, 20) !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+.navbar-toggler
+{
+    overflow: none !important;
+}
 .about{
     width: 100%;
     padding: 78px 0px;
@@ -36,6 +54,4 @@
     text-transform: capitalize;
     margin-bottom: 25px;
     letter-spacing: 2px;
-    position: absolute;
-    margin: left;
 }
