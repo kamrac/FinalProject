@@ -5,19 +5,39 @@
     box-sizing: border-box;
 }
 .navbar {
-    padding: 0 !important;
     font-size: 1.15rem;
     font-weight: 500;
     z-index: 1;
     background: wheat;
-    min-height: 15vh;
+    min-height: 10vh;
     height: 0rem;
 }
-.navbar .navbar-brand a{
-    padding: 1rem 0;
-    display: block;
-    text-decoration: none;
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .container-fluid {
+        margin: -37px 30px 0px 0px;
+    }
+
+    .navbar {
+        padding-right: 60px;
+        font-size: 1.15rem;
+        font-weight: 500;
+        z-index: 1;
+        background: wheat;
+        min-height: 15vh;
+        height: 0rem;
+    }
+  }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .navbar {
+        padding-right: 60px;
+        min-height: 12vh;
+    }
 }
+
 .nav-link {
     color: rgb(176, 128, 31) !important;
     font-weight: 600;
@@ -104,3 +124,25 @@
     margin-bottom: 25px;
     letter-spacing: 2px;
 }
+
+/*-----------------------------------------------------Post.html-----------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.p-md-5 {
+    margin: 145px 0;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .p-md-5 {
+         margin: 175px 0;
+    }        
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .p-md-5 {
+        margin: 125px 0;
+    }
+    }
