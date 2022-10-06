@@ -4,24 +4,73 @@
     font-family: 'Josefin Sans' sans-serif;
     box-sizing: border-box;
 }
-.navbar
-{
+.navbar {
     padding: 0 !important;
     font-size: 1.15rem;
-    font-weight: 600;
+    font-weight: 500;
     z-index: 1;
+    background: wheat;
+    min-height: 15vh;
+    height: 0rem;
 }
-.nav-link 
-{
-    color: rgb(50, 40, 20) !important;
+.navbar .navbar-brand a{
+    padding: 1rem 0;
+    display: block;
+    text-decoration: none;
+}
+.nav-link {
+    color: rgb(176, 128, 31) !important;
     font-weight: 600;
     float: right;
     text-align: left;
+    float: right;
+    text-align: left;
 }
-.navbar-toggler
-{
+.navbar-toggler{
+    background: rgb(238, 133, 133);
+    border: none;
+    padding: 10px 6px;
+    outline: none;
     overflow: none !important;
 }
+.nav-item
+{
+    padding: .5rem;
+}
+.nav-link.active,
+.nav-link:hover {
+    color: rgb(203, 159, 126) !important;
+}
+
+/*---------------------------------- Carousel------------------------------------------*/
+.carousel-item{
+    height: 32rem;
+    background: black;
+    background-size: cover;
+    position: relative;
+    opacity: 0.7;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 70px;
+    font-weight: 500;
+    font-style: oblique;
+    color: rgb(23, 157, 77);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+/*-----------------------------------------------------About.html-----------------------------------*/
 .about{
     width: 100%;
     padding: 78px 0px;
