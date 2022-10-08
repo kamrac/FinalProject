@@ -125,6 +125,36 @@
     letter-spacing: 2px;
 }
 
+
+/* ---------------------------index.html Homepage css!!--------------------- */
+
+.HomepageContainer {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 2% 20%;
+
+}
+
+.homepageCarousel {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 2% 20%;
+}
+
+h1 {
+    text-align: center;
+    padding: 2%;
+    margin-top: 10%;
+}
+.Ourspaceh1{
+    color: #00f;
+}
+
+
+
+
 /*-----------------------------------------------------Post.html-----------------------------------*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
