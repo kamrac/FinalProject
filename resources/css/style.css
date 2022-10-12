@@ -61,8 +61,87 @@
 .nav-link:hover {
     color: rgb(203, 159, 126) !important;
 }
+body{
+    background-color: rgb(21, 113, 69);
+}
+/*-------------------------------------------------------------------ABOUT US---------------------------------------------------------*/
+.about-1{
+    margin: 80px;
+    padding: 5px;
+}
+.about-1 h1{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about-1 p{
+    text-align: center;
+    padding: 8px;
+    color: rgb(226, 204, 204);
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 80px,30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .6);
+}
+.about-item i{
+    font-size: 43px;
+    margin: 0;
+}
+.about-item h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.about-item hr{
+    width: 60px;
+    height: 100px;
+    background-color: #064022;
+    margin: 0 auto;
+    border: none;
+}
+.about-item p{
+    margin: 20px;
+    padding-left: 35px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about-item:hover{
+    background-color: #0c6da9;
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color: #fff;
+}
 
-/*---------------------------------- Carousel------------------------------------------*/
+.about-item:hoover hr{
+    background-color: #fff;
+}
+.about-item:hoover i{
+    transform: translateY(-20px);
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr{
+    transition: all 400ms ease-in-out;
+}
+footer{
+    background: #212226;
+    padding: 20px;
+}
+footer p{
+    color: #fff;
+}
+
+
+
+
+/*---------------------------------- Carousel------------------------------------------*
 .carousel-item{
     height: 32rem;
     background: black;
@@ -90,6 +169,7 @@
     padding-right: 50px;
     padding-bottom: 50px;
 }
+-----------------*/
 /*-----------------------------------------------------About.html-----------------------------------*/
 .about{
     width: 100%;
