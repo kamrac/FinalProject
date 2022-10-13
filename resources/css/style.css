@@ -1,16 +1,23 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 *{
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans' sans-serif;
     box-sizing: border-box;
 }
+body{
+    background-color: white;
+}
 .navbar {
     font-size: 1.15rem;
     font-weight: 500;
     z-index: 1;
-    background: wheat;
+    background-image: linear-gradient(to right,#df8bef , #08f56396);
     min-height: 10vh;
     height: 0rem;
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 0.5px;
+    width: 100;
 }
 
 @media only screen and (max-width: 768px) {
@@ -24,7 +31,6 @@
         font-size: 1.15rem;
         font-weight: 500;
         z-index: 1;
-        background: wheat;
         min-height: 15vh;
         height: 0rem;
     }
@@ -39,15 +45,16 @@
 }
 
 .nav-link {
-    color: rgb(176, 128, 31) !important;
-    font-weight: 600;
+    color: #302807 !important;
+    font-weight: 500;
     float: right;
     text-align: left;
     float: right;
     text-align: left;
+    max-width: 668px;
 }
 .navbar-toggler{
-    background: rgb(238, 133, 133);
+    background: rgb(154, 133, 238);
     border: none;
     padding: 10px 6px;
     outline: none;
@@ -57,14 +64,14 @@
 {
     padding: .5rem;
 }
-.nav-link.active,
+
 .nav-link:hover {
-    color: rgb(203, 159, 126) !important;
+    color: rgb(185, 62, 128) !important;
 }
-body{
-    background-color: rgb(21, 113, 69);
+/*---------------------------------------------------ABOUT US-------------------------------------------------------*/
+.about{
+    background-color: rgb(106, 142, 174);
 }
-/*-------------------------------------------------------------------ABOUT US---------------------------------------------------------*/
 .about-1{
     margin: 80px;
     padding: 5px;
@@ -78,7 +85,7 @@ body{
 .about-1 p{
     text-align: center;
     padding: 8px;
-    color: rgb(226, 204, 204);
+    color: rgb(66, 81, 213);
     font-size: 30px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -131,16 +138,20 @@ body{
     transition: all 400ms ease-in-out;
 }
 footer{
-    background: #212226;
-    padding: 20px;
+    color: rgb(109, 104, 104);
+    font-weight: 300;
+    font-size: .9rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px;
+    margin: 3px auto 0;
 }
-footer p{
-    color: #fff;
+.text-center{
+    padding: 2px;
+    padding-top: 10px;
+    margin-top: 200px;
+
 }
-
-
-
-
 /*---------------------------------- Carousel------------------------------------------*
 .carousel-item{
     height: 32rem;
@@ -256,3 +267,58 @@ h1 {
         margin: 125px 0;
     }
     }
+/*---------------------------------------------------item_form-------------------------------------------------------*/
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+.wrapper h1{
+    margin-bottom: 40px;
+    font-size: 42px;
+    color: #064022;
+}
+.wrapper p{
+    margin-bottom: 40px;
+    color: #221717;
+    font-size: 20px;
+}
+.newsletter{
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+}
+.newsletter .input{
+    width: 100%;
+    padding: 30px 100px 30px 60px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+.newsletter .bi{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 30px;
+    color: #212226;
+}
+.newsletter .btn{
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: translateY(-50);
+    background: rgb(36, 36, 199);
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    cursor: pointer;
+}
