@@ -152,7 +152,8 @@ footer{
     margin-top: 200px;
 
 }
-/*---------------------------------- Carousel------------------------------------------*
+/*---------------------------------- Carousel------------------------------------------*/
+
 .carousel-item{
     height: 32rem;
     background: black;
@@ -247,6 +248,24 @@ h1 {
 
 
 /*-----------------------------------------------------Post.html-----------------------------------*/
+.p-4.p-md-5.mb-4.rounded {
+    margin-top: 30px;
+    background-color: #3423A6;
+}
+h1.display-4 {
+    text-align: left;
+    color:white;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+}
+
+img.sisterfriends {
+    object-fit: cover;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 .p-md-5 {
