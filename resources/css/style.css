@@ -230,11 +230,22 @@ footer{
     padding: 2% 20%;
 }
 
-h1 {
+
+
+.homepageVideos{
+    justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding: 2% 20%;
+}
+
+h1,h2{
     text-align: center;
     padding: 2%;
-    margin-top: 10%;
+    margin-top: 2%;
+    
 }
+
 .Ourspaceh1{
     color: #00f;
 }
@@ -249,6 +260,11 @@ h1 {
     margin: 145px 0;
 }
 }
+
+
+
+
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
