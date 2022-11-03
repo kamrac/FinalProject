@@ -149,7 +149,8 @@ footer{
     margin-top: 200px;
 
 }
-/*---------------------------------- Carousel------------------------------------------*
+/*---------------------------------- Carousel------------------------------------------*/
+
 .carousel-item{
     height: 32rem;
     background: black;
@@ -254,6 +255,52 @@ h1,h2{
 
 
 /*-----------------------------------------------------Post.html-----------------------------------*/
+main.container {
+    padding: 0 80px;
+}
+.p-4.p-md-5.mb-4.rounded {
+    margin-top: 30px;
+    background-color: #3423A6;
+}
+h1.display-4 {
+    text-align: left;
+    color:white;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+}
+
+img.sisterfriends {
+    object-fit: cover;
+}
+.fa {
+    padding: 7px 12px;
+    font-size: 25px !important;
+    text-align: center;
+    text-decoration: none;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }     
+  .fa-github {
+    background: #4078c0;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 .p-md-5 {
