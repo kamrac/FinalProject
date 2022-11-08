@@ -88,21 +88,20 @@
 
       <!-- Card Component Sample Test -->
 
-      <div class="posts">
-        <input value="Post title" type="text">
-        <input value="date" type="text">
-        <input value="name" type="text">
-        <!-- <img id="imgU"> -->
-        <input value="text" type="text">
-        <input type="button" id="submit" value="Submit">
+      <div class="posts-form">
+        <input type="text" placeholder="Title" id="postTitle">
+        <input type="text" placeholder="first name" id="firstName">
+        <input type="text" placeholder="Leave comment" id="textP">
+        <label for="newPostImageUrl">Add Image </label>
+        <input type="text" id="newPostImageUrl style ">
+        <button id="btn" type="submit">Add Post</button>
       </div>
 
-      <div id="list-post">
-        <h2 id="post-Title"></h2>
-        <h6 id="date"></h6>
-        <h6 id="author"></h6>
-        <h3 id="text"></h3>
-      </div>
+      <!-- div to display posts -->
+      <div id="displayPosts"></div>
+
+
+
 
 
     </div>
