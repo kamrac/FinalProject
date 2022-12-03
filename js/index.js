@@ -7,78 +7,75 @@ const postsController = new itemsController(0);
 5. Write event listener that grabs input and stores it in itemController
 */
 
+// creating DOM variables 
 let button = document.getElementById("btn");
-//when the click event listener fires on button the added event listener reads the info and stores input in variables creates inside anonymous function in event handler
-button.addEventListener("click", () => {
-  let newPostFirstName = document.getElementById("firstName");
-  let newPostParagraphText = document.getElementById("textP");
-  let newPostTitle = document.getElementById("postTitle");
-  let newPostImageURL = document.getElementById("newPostImageUrl");
-  console.log(
-    newPostFirstName.value,
-    newPostParagraphText.value,
-    newPostTitle.value,
-    newPostImageURL.value
-  );
+let postsForm = document.getElementById("postsForm");
+let displayPostsCont = document.querySelector(".displayPosts");
+let titleInput = document.getElementById("postTitle");
+let authorInput = document.getElementById("authorName");
+let textInput = document.getElementById("textP");
+let imageInput = document.getElementById("newPostImageUrl");
 
-  //pass grabbed input into new variables
-  const fName = newPostFirstName.value;
-  const paragraphText = newPostParagraphText.value;
-  const newTitle = newPostTitle.value;
-  const newPostImage = newPostImageURL.value;
+//display items from local storage
+const posts = JSON.parse(localStorage.getItem("posts")) || [];
 
-  //store variables with the input in itemsController;
-  postController.methodToAddPost(newTitle, fName, newPostImage, paragraphText);
-
-  //Clear Form
-  newPostFirstName.value = "";
-  newPostParagraphText.value = "";
-  newPostTitle.value = "";
-  newPostImageURL.value = "";
+const addPost = (title, author, text, image) => {
+  posts.push({
+  title,
+  author,
+  text,
+  image
 });
+// Add items to local storage
+  localStorage.setItem("posts",JSON.stringify(posts));
 
-function addPostCard(item) {
-  const itemHTML =
-    '<div class="card"  >\n' +
-    '<h2 class="card-firstName"> Title: ' +
-    item.newTitle +
-    "</h2>\n" +
-    '<h3 class="card-firstName">' +
-    "Name: " +
-    item.fName +
-    "</h3>\n" +
-    "<img src =" +
-    item.newPostImage +
-    " >\n" +
-    '<p class="card-text ">' +
-    "COMMENT:" +
-    "<br/>" +
-    item.paragraphText +
-    "</p>\n" +
-    " </div>\n" +
-    "</div>\n" +
-    "<br/>";
+  return {title, author, text, image};
+};
 
-  const displayPosts = document.getElementById("displayPosts");
-  displayPosts.innerHTML += itemHTML;
+
+//  Create the the blog post with elements, then append it
+
+const createBlogPostElement = ({title, author, text, image}) => {
+  //create elements
+  const postDiv = document.createElement('div');
+  const blogPostTitle = document.createElement('h2');
+  const authorName = document.createElement('h6');
+  const authorPost = document.createElement('p');
+  const authorImg = document.createElement('img')
+ 
+
+  // add in content
+  blogPostTitle.innerText = "Blog post title: " + title;
+  authorName.innerText = "Author name: " + author;
+  authorPost.innerText = "post: " + text;
+  authorImg.src = image;
+  // authorImg.setAttribute("alt", "an appropriate description of the image for accessibility");
+
+  // add  to the DOM
+  postDiv.append(blogPostTitle, authorName, authorPost, authorImg);
+  displayPostsCont.appendChild(postDiv);
 }
 
-// addPostCard({
-//   newTitle: "MY Post",
-//   fName: "Lizette",
-//   paragraphText: "THIS IS MY FIRST POST",
-//   newPostImage:
-//     "https://images.pexels.com/photos/936048/pexels-photo-936048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-// });
+posts.forEach(createBlogPostElement);
 
-//save data to local storage using setItem. Pass the correct data
-localStorage.setItem("postsArray", JSON.stringify());
+//when the click event listener fires on button the added event listener reads the info and stores input in variables creates inside anonymous function in event handler
+postsForm.onsubmit =e => {
+  e.preventDefault();
 
-// //use local storage to load data
-// function loadMyDataFromLocalStorage() {
-//   const myMessage = JSON.parse(localStorage.getItem("postsArray"));
-// }
+  const newPost = addPost(
+  titleInput.value,
+  authorInput.value,
+  textInput.value, 
+  imageInput.value)
+  
 
-//console.log(addPostCard);
 
-// loadMyDataFromLocalStorage();
+  createBlogPostElement(newPost)  
+  
+  // //Clear Form
+  titleInput.value = "";
+  authorInput.value = "";
+  textInput.value = "";
+  imageInput.value = "";
+};
+
