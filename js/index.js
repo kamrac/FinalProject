@@ -15,44 +15,50 @@ let titleInput = document.getElementById("postTitle");
 let authorInput = document.getElementById("authorName");
 let textInput = document.getElementById("textP");
 let imageInput = document.getElementById("newPostImageUrl");
+let dateInput = document.getElementById("date");
 
 //display items from local storage
 const posts = JSON.parse(localStorage.getItem("posts")) || [];
 
-const addPost = (title, author, text, image) => {
+const addPost = (title, author, date, text, image) => {
   posts.push({
   title,
   author,
+  date,
   text,
   image
 });
 // Add items to local storage
   localStorage.setItem("posts",JSON.stringify(posts));
 
-  return {title, author, text, image};
+  return {title, author, date, text, image};
 };
 
 
 //  Create the the blog post with elements, then append it
 
-const createBlogPostElement = ({title, author, text, image}) => {
+const createBlogPostElement = ({title, author, date, text, image}) => {
   //create elements
   const postDiv = document.createElement('div');
   const blogPostTitle = document.createElement('h2');
   const authorName = document.createElement('h6');
+  const postDate = document.createElement("p");
+    postDate.setAttribute('type', 'date');
   const authorPost = document.createElement('p');
-  const authorImg = document.createElement('img')
+  const authorImg = document.createElement('img');
+ 
  
 
   // add in content
   blogPostTitle.innerText = "Blog post title: " + title;
   authorName.innerText = "Author name: " + author;
+  postDate.innerText = date;
   authorPost.innerText = "post: " + text;
   authorImg.src = image;
   // authorImg.setAttribute("alt", "an appropriate description of the image for accessibility");
 
   // add  to the DOM
-  postDiv.append(blogPostTitle, authorName, authorPost, authorImg);
+  postDiv.append(blogPostTitle, authorName, postDate, authorPost, authorImg);
   displayPostsCont.appendChild(postDiv);
 }
 
@@ -65,6 +71,7 @@ postsForm.onsubmit =e => {
   const newPost = addPost(
   titleInput.value,
   authorInput.value,
+  dateInput.value,
   textInput.value, 
   imageInput.value)
   
@@ -75,6 +82,7 @@ postsForm.onsubmit =e => {
   // //Clear Form
   titleInput.value = "";
   authorInput.value = "";
+  dateInput.value = "";
   textInput.value = "";
   imageInput.value = "";
 };
