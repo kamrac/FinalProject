@@ -50,10 +50,10 @@ const createBlogPostElement = ({title, author, date, text, image}) => {
  
 
   // add in content
-  blogPostTitle.innerText = "Blog post title: " + title;
-  authorName.innerText = "Author name: " + author;
-  postDate.innerText = date;
-  authorPost.innerText = "post: " + text;
+  blogPostTitle.innerText = title;
+  authorName.innerText = "By: " + author;
+  postDate.innerText = "Posted on:" + date;
+  authorPost.innerText = text;
   authorImg.src = image;
   // authorImg.setAttribute("alt", "an appropriate description of the image for accessibility");
 
