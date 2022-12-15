@@ -47,10 +47,10 @@ const createBlogPostElement = ({ title, author, date, text, image }) => {
   const authorImg = document.createElement("img");
 
   // add in content
-  blogPostTitle.innerText = title;
-  authorName.innerText = "By: " + author;
-  postDate.innerText = "Posted on:" + date;
-  authorPost.innerText = text;
+  blogPostTitle.innerText = "Blog post title: " + title;
+  authorName.innerText = "Author name: " + author;
+  postDate.innerText = date;
+  authorPost.innerText = "post: " + text;
   authorImg.src = image;
   // authorImg.setAttribute("alt", "an appropriate description of the image for accessibility");
 
@@ -82,3 +82,4 @@ postsForm.onsubmit = (e) => {
   textInput.value = "";
   imageInput.value = "";
 };
+
