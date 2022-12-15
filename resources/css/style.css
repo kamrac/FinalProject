@@ -277,6 +277,10 @@ h1.display-4 {
     width: 75%;
     height: auto;
 }
+
+img.KB {
+    border-radius: 50%;
+  }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 .p-md-5 {
