@@ -76,7 +76,7 @@ postsForm.onsubmit =e => {
   imageInput.value)
   
 
-// create new post
+
   createBlogPostElement(newPost)  
   
   // //Clear Form
@@ -86,4 +86,5 @@ postsForm.onsubmit =e => {
   textInput.value = "";
   imageInput.value = "";
 };
+
 
