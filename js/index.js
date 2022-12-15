@@ -65,8 +65,8 @@ const createBlogPostElement = ({title, author, date, text, image}) => {
 posts.forEach(createBlogPostElement);
 
 //when the click event listener fires on button the added event listener reads the info and stores input in variables creates inside anonymous function in event handler
-postsForm.onsubmit =e => {
-  e.preventDefault();
+postsForm.onsubmit = (e) => {
+  // e.preventDefault();
 
   const newPost = addPost(
   titleInput.value,
