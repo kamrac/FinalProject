@@ -76,7 +76,7 @@ postsForm.onsubmit =e => {
   imageInput.value)
   
 
-
+// added blog post
   createBlogPostElement(newPost)  
   
   // //Clear Form
