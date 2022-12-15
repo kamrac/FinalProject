@@ -7,7 +7,7 @@ const postsController = new itemsController(0);
 5. Write event listener that grabs input and stores it in itemController
 */
 
-// creating DOM variables 
+// creating DOM variables
 let button = document.getElementById("btn");
 let postsForm = document.getElementById("postsForm");
 let displayPostsCont = document.querySelector(".displayPosts");
@@ -22,32 +22,29 @@ const posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 const addPost = (title, author, date, text, image) => {
   posts.push({
-  title,
-  author,
-  date,
-  text,
-  image
-});
-// Add items to local storage
-  localStorage.setItem("posts",JSON.stringify(posts));
+    title,
+    author,
+    date,
+    text,
+    image,
+  });
+  // Add items to local storage
+  localStorage.setItem("posts", JSON.stringify(posts));
 
-  return {title, author, date, text, image};
+  return { title, author, date, text, image };
 };
-
 
 //  Create the the blog post with elements, then append it
 
-const createBlogPostElement = ({title, author, date, text, image}) => {
+const createBlogPostElement = ({ title, author, date, text, image }) => {
   //create elements
-  const postDiv = document.createElement('div');
-  const blogPostTitle = document.createElement('h2');
-  const authorName = document.createElement('h6');
+  const postDiv = document.createElement("div");
+  const blogPostTitle = document.createElement("h2");
+  const authorName = document.createElement("h6");
   const postDate = document.createElement("p");
-    postDate.setAttribute('type', 'date');
-  const authorPost = document.createElement('p');
-  const authorImg = document.createElement('img');
- 
- 
+  postDate.setAttribute("type", "date");
+  const authorPost = document.createElement("p");
+  const authorImg = document.createElement("img");
 
   // add in content
   blogPostTitle.innerText = "Blog post title: " + title;
@@ -60,25 +57,24 @@ const createBlogPostElement = ({title, author, date, text, image}) => {
   // add  to the DOM
   postDiv.append(blogPostTitle, authorName, postDate, authorPost, authorImg);
   displayPostsCont.appendChild(postDiv);
-}
+};
 
 posts.forEach(createBlogPostElement);
 
 //when the click event listener fires on button the added event listener reads the info and stores input in variables creates inside anonymous function in event handler
 postsForm.onsubmit = (e) => {
-  // e.preventDefault();
+  e.preventDefault();
 
   const newPost = addPost(
-  titleInput.value,
-  authorInput.value,
-  dateInput.value,
-  textInput.value, 
-  imageInput.value)
-  
+    titleInput.value,
+    authorInput.value,
+    dateInput.value,
+    textInput.value,
+    imageInput.value
+  );
 
+  createBlogPostElement(newPost);
 
-  createBlogPostElement(newPost)  
-  
   // //Clear Form
   titleInput.value = "";
   authorInput.value = "";
@@ -86,5 +82,4 @@ postsForm.onsubmit = (e) => {
   textInput.value = "";
   imageInput.value = "";
 };
-
 
