@@ -307,6 +307,129 @@ h1.display-4 {
         margin: 125px 0;
     }
     }
+/*-----------------------------------------------------Bement Post.html-----------------------------------*/
+.banner{
+    background: url(/images/1.avif);
+    height: 350px;
+    background-size: 100%;
+    background-position:bottom ;
+}
+.clearfix{
+    clear: both;
+}
+.col-div-4{
+    width: 30%;
+    float: left;
+}
+.col-div-8{
+    width: 70%;
+    float: left;
+}
+header{
+    padding: 20px 0px;
+}
+h1{
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 80px;
+    color: rgb(18, 35, 224);
+    margin: 3% auto;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    text-shadow: 0px 14px 14px #001800;
+}
+.blog-box{
+    width: 95%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 3px #ddd;
+    margin-bottom: 30px;
+    position: relative;
+}
+.blog-box img{width: 100%;}
+.overlay{
+    position: absolute;
+    background-color: #00000061;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0; 
+}
+.blog-box-s{
+    width: 45%;
+    background-color: white;
+    float: left;
+    margin-bottom: 40px;
+}
+.blog-box-s img{
+    width: 100%;
+    height: 200px;
+}
+.content{
+    padding: 20px;
+}
+.content p:nth-child(1){
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #ff6200;
+}
+.content p:nth-child(2){
+    font-size: 14px;
+    color: #848484;
+}
+.content-box, .content-box-1{
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.content-box p{
+    font-size: 30px; font-weight: bold;
+}
+.blog-box-1{
+    width: 95%;
+    height: 207px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 3px #ddd;
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+.blog-box-1 img{
+    width: 100%;
+    height: 207px;
+}
+.content-box-1 p{
+    font-size: 20px; font-weight: bold;
+}
+.blog-box img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*---------------------------------------------------item_form-------------------------------------------------------*/
 
 .wrapper{
